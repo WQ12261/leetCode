@@ -1,6 +1,6 @@
 package page.leetcode.two;
 
-import page.common.ListNode;
+import page.common.list.ListNode;
 import org.junit.Before;
 import org.junit.Test;
 

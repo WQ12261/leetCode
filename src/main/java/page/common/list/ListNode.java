@@ -1,4 +1,4 @@
-package page.common;
+package page.common.list;
 
 /**
  *@ClassName ListNode

@@ -1,6 +1,6 @@
 package page.leetcode.one;
 
-import page.common.ListNode;
+import page.common.list.ListNode;
 
 /**
  *@ClassName Twentyfive
