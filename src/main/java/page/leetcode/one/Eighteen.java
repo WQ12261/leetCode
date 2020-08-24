@@ -1,4 +1,4 @@
-package page.one;
+package page.leetcode.one;
 
 import java.util.ArrayList;
 import java.util.Arrays;

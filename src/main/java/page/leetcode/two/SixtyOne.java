@@ -1,6 +1,6 @@
-package page.two;
+package page.leetcode.two;
 
-import common.ListNode;
+import page.common.ListNode;
 
 /**
  *@ClassName SixtyOne

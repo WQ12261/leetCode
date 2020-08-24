@@ -1,6 +1,4 @@
-package common;
-
-import java.util.List;
+package page.common;
 
 /**
  *@ClassName ListNode

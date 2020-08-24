@@ -1,7 +1,8 @@
-package page.one;
+package page.leetcode;
 
 import org.junit.Before;
 import org.junit.Test;
+import page.leetcode.one.Eighteen;
 
 import java.util.List;
 

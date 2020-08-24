@@ -1,11 +1,9 @@
-package page.one;
+package page.leetcode;
 
-import common.ListNode;
+import page.common.ListNode;
 import org.junit.Before;
 import org.junit.Test;
-import org.omg.PortableServer.LIFESPAN_POLICY_ID;
-
-import static org.junit.Assert.*;
+import page.leetcode.one.Twentyfive;
 
 /**
  * @author 1226134406@qq.com

@@ -1,10 +1,8 @@
-package page.two;
+package page.leetcode.two;
 
-import common.ListNode;
+import page.common.ListNode;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author 1226134406@qq.com
