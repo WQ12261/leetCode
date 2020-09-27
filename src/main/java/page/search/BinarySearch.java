@@ -1,7 +1,7 @@
 package page.search;
 
 /**
- * @author 梁仕凯
+ * @author 1226134406@qq.com
  * @ClassName BinarySearch
  * @description TODO
  * @time 2020/8/26 15:06

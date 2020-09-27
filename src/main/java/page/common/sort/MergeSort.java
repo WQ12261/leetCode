@@ -3,7 +3,7 @@ package page.common.sort;
 import java.util.Arrays;
 
 /**
- * @author 梁仕凯
+ * @author 1226134406@qq.com
  * @ClassName MerageSort
  * @description TODO
  * @time 2020/8/24 23:09

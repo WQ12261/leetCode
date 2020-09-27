@@ -1,7 +1,7 @@
 package page.common.sort;
 
 /**
- * @author 梁仕凯
+ * @author 1226134406@qq.com
  * @ClassName BucketSort
  * @description 桶排序
  * @time 2020/8/25 8:30
