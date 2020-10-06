@@ -63,8 +63,6 @@ public class HeapSort {
     }
 
     public static void main(String[] args) {
-        int arr[] ={5,2,6,89,6,8,6,5,54,8,9,3};
-        heapSort(arr);
-        System.out.println(Arrays.toString(arr));
+
     }
 }
