@@ -1,4 +1,4 @@
-package page.twentyone;
+package page.leetcode.twentyone;
 
 import java.util.*;
 
