@@ -7,7 +7,7 @@ package page.common.list;
  *@time 2020/8/13 22:07
  */
 public class ListNode {
-    int val;
+    public int val;
     public ListNode next;
     public ListNode(int n){
         val=n;
