@@ -1,7 +1,6 @@
 package page.leetcode.two;
 
 import page.common.tree.TreeNode;
-import page.leetcode.one.ThirtyThree;
 
 /**
  *@className NinetyEight 第98题
