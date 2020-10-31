@@ -2,6 +2,9 @@ package page.leetcode.three;
 
 import page.common.list.ListNode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *@className OneHundredAndFortyTwo
  *@description
@@ -18,6 +21,16 @@ public class OneHundredAndFortyTwo {
      *@date: 2020/10/10 11:44
      */
     public ListNode detectCycle(ListNode head) {
+        Set<ListNode> listNodeSet=new HashSet<>();
+        ListNode listNode=head;
+        while (listNode!=null){
+            if (listNodeSet.contains(listNode) ){
+                return listNode;
+            }else{
+                listNodeSet.add(listNode);
+                listNode=listNode.next;
+            }
+        }
         return null;
     }
 }
