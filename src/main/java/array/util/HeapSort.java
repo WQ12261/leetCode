@@ -1,4 +1,4 @@
-package array;
+package array.util;
 
 import array.util.ArrayUtil;
 
