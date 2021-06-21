@@ -1,6 +1,7 @@
 package array.util;
 
-import java.util.Arrays;
+import java.math.BigDecimal;
+import java.util.*;
 
 /**
  * @author 1226134406@qq.com
@@ -90,11 +91,26 @@ public class FastSort {
         array[i]=array[j];
         array[j]=n;
     }
+    public void test(){
+        int i=8;
+        while ((i-=3)>0);
+        System.out.println("i="+i);
+    }
 
     public static void main(String[] args) {
-        int[] array = ArrayUtil.generatorOneDimension(4, 10, true);
-        System.out.println(Arrays.toString(array));
-        fastSort(array);
-        System.out.println(Arrays.toString(array));
+        /*FastSort fastSort=new FastSort();
+        for (int i=0;i<50_000;i++){
+            fastSort.test();
+        }*/
+        Map<String,String> map=new HashMap<>();
+        map.put("1", "1");
+        Collection<String> values = map.values();
+        List<String> list=new ArrayList<>();
+        list.addAll(values);
+        System.out.println(list);
+        Map<String,Object> map1=new HashMap<>();
+        map1.put("1", new BigDecimal("2"));
+        BigDecimal bigDecimal = (BigDecimal) map1.get("2");
+        System.out.println(bigDecimal);
     }
 }

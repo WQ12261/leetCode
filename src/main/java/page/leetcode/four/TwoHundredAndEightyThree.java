@@ -2,6 +2,8 @@ package page.leetcode.four;
 
 import array.util.ArrayUtil;
 
+import java.util.Random;
+
 /**
  * @author 1226134406@qq.com
  * @className TwoHundredAndEightyThree
@@ -41,11 +43,15 @@ public class TwoHundredAndEightyThree {
     }
 
     public static void main(String[] args) {
-        TwoHundredAndEightyThree twoHundredAndEightyThree=new TwoHundredAndEightyThree();
+        /*TwoHundredAndEightyThree twoHundredAndEightyThree=new TwoHundredAndEightyThree();
         int[] numbers = ArrayUtil.generatorOneDimension(10, 5, false);
         ArrayUtil.showOnwDimension(numbers);
         twoHundredAndEightyThree.moveZeroes(numbers);
-        ArrayUtil.showOnwDimension(numbers);
+        ArrayUtil.showOnwDimension(numbers);*/
+
+        String string = "123456";
+        System.out.println(string.substring(string.length()-2));
+        System.out.println((char)(49));
 
     }
 }
