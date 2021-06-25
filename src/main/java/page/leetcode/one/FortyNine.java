@@ -1,7 +1,6 @@
 package page.leetcode.one;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author 1226134406@qq.com
@@ -18,16 +17,34 @@ public class FortyNine {
      *@auther: 1226134406@qq.com
      *@date: 2020/11/20 13:46
      */
-    public List<List<String>> groupAnagrams(String[] strs) {
+    public static List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> lists=new ArrayList<>();
         if (strs==null||strs.length==0){
             return lists;
         }else {
+            Map<String,List<String>> map=new HashMap<>();
+            for (String string:strs){
+                char[] chars = string.toCharArray();
+                Arrays.sort(chars);
+                String s=new String(chars);
+                if (!map.containsKey(s)){
+                    List<String> list=new ArrayList<>();
+                    list.add(string);
+                    lists.add(list);
+                    map.put(s, list);
+                }else {
 
+                    List<String> list = map.get(s);
+                    list.add(string);
+                }
+            }
         }
         return lists;
     }
-    private void groupAnagrams(List<List<String>> lists,String string){
 
+    public static void main(String[] args) {
+        List<List<String>> lists = groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
+        System.out.println(lists);
     }
+
 }
