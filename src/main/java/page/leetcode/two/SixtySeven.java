@@ -24,19 +24,23 @@ public class SixtySeven {
     private String add(char[] c1,char[] c2){
         StringBuilder stringBuilder=new StringBuilder();
         boolean flag=false;
-        for (int i=c2.length-1;i>=0;i--){
+        for (int i=1;i<=c2.length;i++){
             if (flag){
-                char c = addChar(c1[i], c2[i]);
+                char c = addChar(c1[c1.length-i], c2[c2.length-i]);
                 char c3 = addChar('1', c);
                 stringBuilder.append(c3);
-                if (c1[i]=='1'&&c2[i]==1||c=='1'){
+                if (c1[c1.length-i]=='1'&&c2[c2.length-i]=='1'||c=='1'){
                     flag=true;
+                }else {
+                    flag=false;
                 }
             }else {
-                char c = addChar(c1[i], c2[i]);
+                char c = addChar(c1[c1.length-i], c2[c2.length-i]);
                 stringBuilder.append(c);
-                if (c1[i]=='1'&&c2[i]=='1'){
+                if (c1[c1.length-i]=='1'&&c2[c2.length-i]=='1'){
                     flag=true;
+                }else {
+                    flag=false;
                 }
             }
         }
@@ -76,7 +80,7 @@ public class SixtySeven {
     public static void main(String[] args) {
 
         SixtySeven sixtySeven=new SixtySeven();
-        String s = sixtySeven.addBinary("1111", "111");
+        String s = sixtySeven.addBinary("110111", "101");
         System.out.println(s);
     }
 

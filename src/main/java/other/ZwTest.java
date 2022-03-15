@@ -204,12 +204,29 @@ public class ZwTest {
     }
 
     public static void main(String[] args) {
-        String s="4003123";
-        Date date=new java.sql.Date(1608123480162L);
-        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-        System.out.println(dateFormat.format(date));
-        System.out.println(s.substring(0,4));
+        System.out.println(isLatestVersion("02.00.01", "2.0"));
 
+    }
+    private static boolean isLatestVersion(String version,String versionLatest){
+        String[] versionArray = version.split("\\.");
+        String[] latestArray = versionLatest.split("\\.");
+        int i=0;
+        while (i<versionArray.length&&i<latestArray.length){
+            int versionInt = Integer.parseInt(versionArray[i]);
+            int latestInt = Integer.parseInt(latestArray[i]);
+
+            if (versionInt<latestInt){
+                return false;
+            }else if (versionInt>latestInt){
+                return true;
+            }else {
+                i++;
+            }
+        }
+        if (versionArray.length<latestArray.length){
+            return false;
+        }
+        return true;
     }
 
 }

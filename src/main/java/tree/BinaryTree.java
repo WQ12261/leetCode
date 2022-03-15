@@ -1,7 +1,5 @@
 package tree;
 
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-import com.sun.xml.internal.bind.marshaller.NoEscapeHandler;
 import tree.util.ClueStatue;
 
 /**

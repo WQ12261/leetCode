@@ -1,6 +1,7 @@
 package page.leetcode.two;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -13,12 +14,40 @@ public class Ninety {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<Integer> list=new ArrayList<>();
         List<List<Integer>> result=new ArrayList<>();
+        Arrays.sort(nums);
         result.add(list);
-        if (nums!=null&&nums.length>0){
-            boolean[] flag=new boolean[nums.length];
+
+        subCollect(nums, new ArrayList<>(), result, 0);
+        return result;
+    }
+    public void subCollect(int[] nums,List<Integer> list,List<List<Integer>> lists,int start){
+        if (start==nums.length){
+            return;
+        }
+        for (int i=start;i<nums.length;i++){
+            if (i>0&&nums[i]==nums[i-1]&&i!=start){
+                continue;
+            }
+            list.add(nums[i]);
+            lists.add(new ArrayList<>(list));
+            swap(i, start, nums);
+            subCollect(nums, list, lists, i+1);
+            swap(i, start, nums);
+            list.remove(list.size()-1);
 
         }
-        return result;
+    }
+    public void swap(int a,int b,int[] nums){
+        int c=nums[a];
+        nums[a]=nums[b];
+        nums[a]=c;
+    }
+
+    public static void main(String[] args) {
+        int[] array=new int[]{1,1,2,2};
+        Ninety ninety=new Ninety();
+        List<List<Integer>> lists = ninety.subsetsWithDup(array);
+        System.out.println(lists);
     }
 
 }

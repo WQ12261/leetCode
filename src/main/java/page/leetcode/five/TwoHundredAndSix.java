@@ -8,7 +8,7 @@ import page.common.list.ListNode;
  * @description 204题
  * @time 2020/10/29 20:31
  */
-public class TwoHundredAndFour {
+public class TwoHundredAndSix {
     /**
      *@description: reverseList方法是 翻转链表
      *@param: [head]
