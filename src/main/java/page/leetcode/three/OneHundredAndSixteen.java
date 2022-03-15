@@ -1,0 +1,61 @@
+package page.leetcode.three;
+
+
+public class OneHundredAndSixteen {
+    public Node connect(Node root) {
+        if (root == null) {
+            return null;
+        }
+        root.next = null;
+        connectNode(root, null);
+        return null;
+    }
+
+    public void connectNode(Node node, Node pre) {
+
+        if (pre != null) {
+            pre.next = node.left;
+        }
+        if (node.left != null) {
+            node.left.next = node.right;
+            node.right.next = null;
+            connectNode(node.left, pre == null ? null : pre.right);
+            connectNode(node.right, node.left.right);
+        }
+    }
+
+
+    class Node {
+        public int val;
+        public Node left;
+        public Node right;
+        public Node next;
+
+        public Node() {
+        }
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, Node _left, Node _right, Node _next) {
+            val = _val;
+            left = _left;
+            right = _right;
+            next = _next;
+        }
+    }
+
+    ;
+
+    public static void main(String[] args) {
+        int count = 15;
+        int floor = 0;
+        while (count > 0) {
+            count >>= 1;
+            floor++;
+        }
+
+        System.out.println(1 << 1);
+    }
+}
